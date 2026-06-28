@@ -20,7 +20,7 @@ const NAV_LINKS = [
 export const SITE_CONFIG = {
   brand: "Dreyer Digital",
   email: "armanddreyer57@gmail.com",          // ← CONTACT FORM MESSAGES GO HERE
-  publicEmail: "hello@dreyerdigital.com",     // business email shown publicly
+  publicEmail: "armanddreyer57@gmail.com",     // business email shown publicly
   whatsapp: "0717505364",                   // ← WhatsApp number (international, no +)
   phoneDisplay: "+27 71 750 5364",
   location: "South Africa",
@@ -156,7 +156,7 @@ const PROCESS = [
 ];
 
 const FAQS = [
-  { q: "Can I update the website myself?", a: "No — by default, all sites are fully managed by Dreyer Digital. Content updates, security, and changes are handled by our team on request (pay-as-you-go, or optional Care Plan from R1,499 p/m). Prefer to edit yourself? We can enable self-edit CMS access on request as a one-time add-on, with training videos and editor access. Full code ownership transfer is available at any time — no lock-in." },
+  { q: "Can I update the website myself?", a: "No — by default, all sites are fully managed by Dreyer Digital. Content updates, security, and changes are handled by our team on request (pay-as-you-go, or optional Care Plan from R499 p/m). Prefer to edit yourself? We can enable self-edit CMS access on request as a one-time add-on, with training videos and editor access. Full code ownership transfer is available at any time — no lock-in." },
   { q: "Do your packages include maintenance / updates?", a: "No. All packages are one-time build pricing in South African Rand with a 30-day bug warranty. Ongoing maintenance, security patches, content updates, and monthly changes are NOT included. Updates are handled on-request and billed per task, or via an optional Care Plan at R1,499 p/m. Self-edit CMS is available on request separately." },
   { q: "How long does a website take?", a: "Landing pages: 7–10 days. Full business sites: 2–3 weeks. E-commerce / custom apps: 3–6 weeks. We move fast without cutting quality, and provide weekly builds." },
   { q: "Can you redesign an existing website?", a: "Absolutely. We audit your current site, preserve SEO equity, migrate content, and rebuild with a modern premium stack. Average redesign lift: +42% conversions." },
@@ -496,7 +496,7 @@ export default function App() {
             <div className="rounded-[24px] qw-glass-strong p-[22px] sm:p-[28px] flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 border border-[#f59e0b]/18">
               <div>
                 <div className="display-font text-[22px] sm:text-[25px] font-[660] tracking-tight">Can I update my website myself? <span className="text-[#ffc36a]">No — by default.</span></div>
-                <p className="text-[#a8b9d3] text-[14.8px] mt-1.5 max-w-[700px]">All Dreyer Digital sites are <strong className="text-[#d8e6ff] font-[600]">fully managed by us</strong>. Content updates, security, and changes are handled on request — pay-as-you-go, or optional Care Plan <strong className="text-[#bfe7d2]">R1,499 p/m</strong>. Prefer self-edit? <strong className="text-[#d8e6ff] font-[600]">CMS access can be enabled on request</strong> as a one-time add-on with training. Custom domains: <strong className="text-[#ffd18a]">R350 / year</strong>.</p>
+                <p className="text-[#a8b9d3] text-[14.8px] mt-1.5 max-w-[700px]">All Dreyer Digital sites are <strong className="text-[#d8e6ff] font-[600]">fully managed by us</strong>. Content updates, security, and changes are handled on request — pay-as-you-go, or optional Care Plan <strong className="text-[#bfe7d2]">R499 p/m</strong>. Prefer self-edit? <strong className="text-[#d8e6ff] font-[600]">CMS access can be enabled on request</strong> as a one-time add-on with training. Custom domains: <strong className="text-[#ffd18a]">R350 / year</strong>.</p>
               </div>
               <a href="#faq" className="shrink-0 px-5 py-[12px] rounded-full bg-white text-[#0d1530] text-[13.8px] font-[650]">Read the FAQ →</a>
             </div>
@@ -617,7 +617,7 @@ export default function App() {
 
             <div className="mt-8 max-w-[860px] mx-auto rounded-[18px] qw-glass px-5 py-4 text-[13.5px] text-[#a8bad4] text-center leading-relaxed">
               <strong className="text-[#d4e4ff]">No maintenance included in any package.</strong> Updates are handled on-request, billed per task.<br/>
-              Optional Care Plan: <span className="text-[#bfe7d2]">R1,499 p/m</span> — security patches, backups, performance checks, priority content changes.<br/>
+              Optional Care Plan: <span className="text-[#bfe7d2]">R499 p/m</span> — security patches, backups, performance checks, priority content changes.<br/>
               <span className="text-[#ffc36a]">Self-edit CMS access available on request as a one-time add-on.</span><br/>
               <span className="text-[#ffd18a]">Custom domains: R350 / year</span> • First-year domain FREE with Business & Premium.
             </div>
@@ -700,7 +700,7 @@ export default function App() {
                   <div><div className="display-font text-[24px] font-[700]">48h</div><div className="text-[11px] text-[#8fa6c3]">Avg reply</div></div>
                 </div>
                 <div className="mt-5 text-[12.6px] text-[#9db3cf] bg-white/[0.035] rounded-[12px] px-3 py-3 border border-white/[0.06]">
-                  <strong className="text-[#dbe7ff]">Maintenance? On request.</strong> No packages include maintenance. Care Plan <strong className="text-[#bfe7d2]">R1,499 p/m</strong> optional. Self-edit CMS available on request.<br/>
+                  <strong className="text-[#dbe7ff]">Maintenance? On request.</strong> No packages include maintenance. Care Plan <strong className="text-[#bfe7d2]">R499 p/m</strong> optional. Self-edit CMS available on request.<br/>
                   <span className="text-[#ffd18a]">Custom domains: R350 / year</span>
                 </div>
               </div>
@@ -753,7 +753,7 @@ export default function App() {
 
               <div className="mt-7 rounded-[16px] qw-glass p-4 text-[13.6px] text-[#b6c8e2] leading-relaxed">
                 <strong className="text-[#e6efff]">Can I update my website myself?</strong><br/><span className="text-[#ffc36a]">No — by default.</span> We handle all updates on request.<br/>
-                <strong className="text-[#e6efff] mt-[10px] inline-block">Maintenance included?</strong><br/>No — packages are build-only. Care Plan <strong className="text-[#bfe7d2]">R1,499 p/m</strong> optional.<br/>
+                <strong className="text-[#e6efff] mt-[10px] inline-block">Maintenance included?</strong><br/>No — packages are build-only. Care Plan <strong className="text-[#bfe7d2]">R499 p/m</strong> optional.<br/>
                 <strong className="text-[#e6efff] mt-[10px] inline-block">Self-edit CMS?</strong><br/>Available on request as a paid add-on.<br/>
                 <strong className="text-[#e6efff] mt-[10px] inline-block">Custom domain?</strong><br/><span className="text-[#ffd18a]">R350 / year</span> — first year free with Business & Premium.
               </div>
