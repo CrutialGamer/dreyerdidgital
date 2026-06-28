@@ -21,17 +21,17 @@ export const SITE_CONFIG = {
   brand: "Dreyer Digital",
   email: "armanddreyer57@gmail.com",          // ← CONTACT FORM MESSAGES GO HERE
   publicEmail: "hello@dreyerdigital.com",     // business email shown publicly
-  whatsapp: "27820000000",                   // ← WhatsApp number (international, no +)
-  phoneDisplay: "+27 82 000 0000",
-  location: "Johannesburg, South Africa",
+  whatsapp: "0717505364",                   // ← WhatsApp number (international, no +)
+  phoneDisplay: "+27 71 750 5364",
+  location: "South Africa",
 
   // ── PRICES ── CHANGE HERE ──────────────────
   currency: "R",
   prices: {
-    starter: 14900,      // ← CHANGE STARTER PRICE HERE
-    business: 29500,     // ← CHANGE BUSINESS PRICE HERE
-    premium: 59900,      // ← CHANGE PREMIUM PRICE HERE
-    carePlanMonthly: 1499, // ← CARE PLAN /month
+    starter: 4999,      // ← CHANGE STARTER PRICE HERE
+    business: 7999,     // ← CHANGE BUSINESS PRICE HERE
+    premium: 12000,      // ← CHANGE PREMIUM PRICE HERE
+    carePlanMonthly: 350, // ← CARE PLAN /month
     domainYearly: 350,     // ← CUSTOM DOMAIN /year
   },
   // Format: R14,900
