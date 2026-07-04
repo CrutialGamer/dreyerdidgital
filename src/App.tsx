@@ -21,7 +21,7 @@ const NAV_LINKS = [
 export const SITE_CONFIG = {
   brand: "Dreyer Digital",
   email: "armanddreyer57@gmail.com",          // ← CONTACT FORM MESSAGES GO HERE
-  publicEmail: "hello@dreyerdigital.com",     // business email shown publicly
+  publicEmail: "armanddreyer57@gmail.com",     // business email shown publicly
   whatsapp: "27820000000",                   // ← WhatsApp number (international, no +)
   phoneDisplay: "+27 82 000 0000",
   location: "Johannesburg, South Africa",
