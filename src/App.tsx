@@ -169,13 +169,34 @@ const PROCESS = [
 ];
 
 const FAQS = [
-  { q: "Can I update the website myself?", a: "No — by default, all sites are fully managed by DBT Digital. Content updates, security, and changes are handled by our team on request (pay-as-you-go, or optional Care Plan from R499 p/m). Prefer to edit yourself? We can enable self-edit CMS access on request as a one-time add-on, with training videos and editor access. Full code ownership transfer is available at any time — no lock-in." },
-  { q: "Do your packages include maintenance / updates?", a: "No. All packages are one-time build pricing in South African Rand with a 30-day bug warranty. Ongoing maintenance, security patches, content updates, and monthly changes are NOT included. Updates are handled on-request and billed per task, or via an optional Care Plan at R499 p/m. Self-edit CMS is available on request separately." },
-  { q: "How long does a website take?", a: "Landing pages: 7–10 days. Full business sites: 2–3 weeks. E-commerce / custom apps: 3–6 weeks. We move fast without cutting quality, and provide weekly builds." },
-  { q: "Can you redesign an existing website?", a: "Absolutely. We audit your current site, preserve SEO equity, migrate content, and rebuild with a modern premium stack. Average redesign lift: +42% conversions." },
-  { q: "Do you offer hosting?", a: "Yes. Secure global CDN, SSL, daily backups, 99.9% uptime, and fully managed. Hosting is included in Business & Premium for year 1. Custom domains are R350 / year." },
-  { q: "Can you build online stores?", a: "Shopify headless, WooCommerce, or full custom. Payments (PayFast / Yoco / Stripe), inventory, subscriptions, multi-currency. We manage store updates for you on request, or enable self-edit CMS access as an add-on." },
-  { q: "How much is a custom domain?", a: "Custom .co.za / .com domains are R350 per year, managed by us. Includes DNS setup, SSL, and email forwarding setup. First-year domain registration included free with Business & Premium plans." },
+  { q: "Can I update the website myself?", a: "No — by default, all sites are fully managed by DBT Digital. Content updates, security, and changes are handled by our team on request (pay-as-you-go)." },
+  { q: "Do your packages include maintenance / updates?", a: "No. All packages are one-time build pricing in South African Rand with a 30-day bug warranty. Ongoing maintenance, security patches, and content changes are handled on request." },
+  { q: "How long does a website take?", a: "Landing pages: 7–10 days. Full business sites: 2–3 weeks. E-commerce / custom apps: 3–6 weeks. We move fast without cutting quality." },
+  { q: "Can you redesign an existing website?", a: "Absolutely. We audit your current site, preserve SEO equity, migrate content, and rebuild with a modern premium stack." },
+  { q: "Do you offer hosting?", a: "Yes. Secure global CDN, SSL, daily backups, 99.9% uptime, and fully managed hosting. Hosting is included in Business & Premium for year 1." },
+  { q: "Can you build online stores?", a: "Yes. Shopify headless, WooCommerce, or custom storefronts are all possible. We can scope payments, inventory, subscriptions, and multi-currency flows." },
+  { q: "How much is a custom domain?", a: "Custom .co.za / .com domains are R350 per year, managed by us. Includes DNS setup, SSL, and email forwarding setup." },
+];
+
+const PORTFOLIO = [
+  {
+    title: "Northwind Rebrand",
+    description: "Luxury brand positioning and conversion-focused landing page for a premium business launch.",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
+    link: "#contact"
+  },
+  {
+    title: "Forge Studio",
+    description: "A polished service website with strong lead generation and clear offer positioning.",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80",
+    link: "#contact"
+  },
+  {
+    title: "Arc Systems",
+    description: "Clean SaaS-style marketing site designed to highlight product value and trust signals.",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+    link: "#contact"
+  }
 ];
 
 function ScrollProgressBar() {
@@ -240,8 +261,8 @@ export default function App() {
       `}</style>
       <ScrollProgressBar />
       <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
-        <div className="absolute -top-36 -right-28 h-[520px] w-[520px] rounded-full blur-[120px] opacity-[.16]" style={{ background: "radial-gradient(circle at center, #3B82F6 0%, #8B5CF6 52%, transparent 70%)" }} />
-        <div className="absolute top-[48%] -left-44 h-[420px] w-[420px] rounded-full blur-[110px] opacity-[.10]" style={{ background: "radial-gradient(circle at center, #06B6D4 0%, #8B5CF6 60%, transparent 72%)" }} />
+        <div className="absolute -top-36 -right-28 h-[520px] w-[520px] rounded-full blur-[120px] opacity-[.16]" style={{ background: "radial-gradient(circle at center, #3B82F6 0%, #8B5CF6 52%, transparent 100%)" }} />
+        <div className="absolute top-[48%] -left-44 h-[420px] w-[420px] rounded-full blur-[110px] opacity-[.10]" style={{ background: "radial-gradient(circle at center, #06B6D4 0%, #8B5CF6 60%, transparent 100%)" }} />
         <div className="absolute bottom-0 right-1/3 h-[230px] w-[680px] rounded-full blur-[100px] opacity-[.07]" style={{ background: "radial-gradient(circle at center, #8B5CF6 0%, #3B82F6 100%)" }} />
         <div className="qw-grid absolute inset-0 opacity-[0.19]" />
       </div>
@@ -285,7 +306,6 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {/* NAV */}
       <header className="sticky top-0 z-[60] border-b border-white/[0.075]">
         <div className="backdrop-blur-2xl bg-[#0b1120]/80 qw-noise relative">
           <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-10 h-[72px] flex items-center justify-between">
@@ -340,7 +360,6 @@ export default function App() {
       </header>
 
       <main className="relative z-10">
-        {/* HERO */}
         <section id="home" className="relative">
           <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-10 pt-[66px] sm:pt-[100px] pb-[74px]">
             <div className="grid lg:grid-cols-[1.06fr_.94fr] gap-12 lg:gap-8 items-center">
@@ -366,7 +385,7 @@ export default function App() {
                   </p>
 
                   <div className="flex flex-wrap gap-3 mt-8">
-                    <a href="#contact" className="px-[24px] py-[14px] rounded-full bg-white text-[#0b1427] font-[640] text-[15px] shadow-[0_8px_30px_rgba(255,255,255,.10)] hover:translate-y-[-1px] transition-all">
+                    <a href="#contact" className="px-[24px] py-[14px] rounded-full bg-white text-[#0b1427] font-[640] text-[15px] shadow-[0_8px_30px_rgba(255,255,255,.10)] hover:translate-y-[-1px] transition-transform">
                       Get a Free Quote →
                     </a>
                     <a href="#services" className="px-[24px] py-[14px] rounded-full qw-glass font-[560] text-[15px] text-[#dde7f7] hover:bg-white/[.09] transition-colors">
@@ -387,7 +406,6 @@ export default function App() {
                 </motion.div>
               </div>
 
-              {/* LAPTOP */}
               <motion.div
                 initial={{ opacity: 0, y: 24, scale: .985 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -396,10 +414,8 @@ export default function App() {
               >
                 <div className="absolute -inset-[44px] rounded-[54px] blur-[60px] opacity-35 bg-[radial-gradient(60%_60%_at_50%_50%,#3B82F655_0%,#8B5CF638_55%,transparent_82%)]" />
                 <div className="relative mx-auto w-full max-w-[600px]">
-                  {/* screen */}
                   <div className="relative rounded-[22px] border border-white/[.15] qw-glass-strong p-[12px] qw-glow-shadow">
                     <div className="rounded-[14px] overflow-hidden bg-[#0f1627] border border-white/[.07]">
-                      {/* browser bar */}
                       <div className="flex items-center gap-[7px] px-4 h-[38px] bg-[#121d34] border-b border-white/[.07]">
                         <span className="w-[11px] h-[11px] rounded-full bg-[#ff5f57]" />
                         <span className="w-[11px] h-[11px] rounded-full bg-[#ffbd2e]" />
@@ -411,7 +427,6 @@ export default function App() {
                         </div>
                       </div>
 
-                      {/* mock website */}
                       <div className="relative h-[286px] sm:h-[330px] overflow-hidden bg-gradient-to-br from-[#111a30] via-[#131d36] to-[#101a30]">
                         <motion.div
                           initial={{ opacity: 0 }}
@@ -460,13 +475,12 @@ export default function App() {
                           </div>
 
                           <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 text-[9px] text-[#94aecf]">
-                            {["We update for you","On-request pricing","CMS add-on available"].map(label=>(
+                            {['We update for you','On-request pricing','CMS add-on available'].map(label=>(
                               <div key={label} className="px-3 py-[10px] rounded-[10px] bg-white/[.035] border border-white/[.06] text-center sm:text-left">{label}</div>
                             ))}
                           </div>
                         </motion.div>
 
-                        {/* cleaner floating metric cards */}
                         <motion.div
                           initial={{ x:18, opacity:0 }}
                           animate={{ x:0, opacity:1 }}
@@ -488,7 +502,6 @@ export default function App() {
                       </div>
                     </div>
                   </div>
-                  {/* laptop base */}
                   <div className="h-[13px] mx-[20px] mt-[-1px] bg-gradient-to-b from-[#d4d8e0] to-[#b6bbc6] rounded-b-[18px] shadow-[0_10px_40px_rgba(0,0,0,.55)] relative">
                     <div className="absolute left-1/2 -translate-x-1/2 top-[3px] w-[95px] h-[5px] rounded-full bg-[#9aa1ad]" />
                   </div>
@@ -497,7 +510,6 @@ export default function App() {
               </motion.div>
             </div>
 
-            {/* trust bar */}
             <div className="mt-14 sm:mt-20 border-t border-white/[.07] pt-8">
               <div className="text-[11.5px] tracking-[0.14em] text-[#8092b2] mb-5">MANAGED UPDATES • NO FORCED MAINTENANCE • CMS ACCESS ON REQUEST</div>
               <div className="flex flex-wrap gap-x-10 gap-y-3 text-[15.5px] text-[#9eb1cf] font-[500] display-font tracking-tight opacity-95">
@@ -512,20 +524,18 @@ export default function App() {
           </div>
         </section>
 
-        {/* SELF EDIT CALL OUT – now inverted */}
         <section className="py-[34px]">
           <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-10">
             <div className="rounded-[24px] qw-glass-strong p-[22px] sm:p-[28px] flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 border border-[#f59e0b]/18">
               <div>
                 <div className="display-font text-[22px] sm:text-[25px] font-[660] tracking-tight">Can I update my website myself? <span className="text-[#ffc36a]">No — by default.</span></div>
-                <p className="text-[#a8b9d3] text-[14.8px] mt-1.5 max-w-[700px]">All DBT Digital sites are <strong className="text-[#d8e6ff] font-[600]">fully managed by us</strong>. Content updates, security, and changes are handled on request — pay-as-you-go, or optional Care Plan <strong className="text-[#bfe7d2]">R499 p/m</strong>. Prefer self-edit? <strong className="text-[#d8e6ff] font-[600]">CMS access can be enabled on request</strong> as a one-time add-on with training. Custom domains: <strong className="text-[#ffd18a]">R350 / year</strong>.</p>
+                <p className="text-[#a8b9d3] text-[14.8px] mt-1.5 max-w-[700px]">All DBT Digital sites are <strong className="text-[#d8e6ff] font-[600]">fully managed by us</strong>. Content updates, security, and changes are handled by our team on request.</p>
               </div>
               <a href="#faq" className="shrink-0 px-5 py-[12px] rounded-full bg-white text-[#0d1530] text-[13.8px] font-[650]">Read the FAQ →</a>
             </div>
           </div>
         </section>
 
-        {/* SERVICES */}
         <section id="services" className="relative py-[72px] sm:py-[96px]">
           <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-10">
             <div className="max-w-[680px]">
@@ -567,7 +577,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* FEATURED CRM PROJECT */}
         <section id="featured" className="py-[80px] sm:py-[105px] bg-[#0c1527]/80 border-y border-white/[.07] relative overflow-hidden">
           <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-10">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
@@ -583,26 +592,24 @@ export default function App() {
                   Take a look inside a full-stack enterprise CRM web application we built from scratch. Test out the live build with our public demo credentials below.
                 </p>
               </div>
-              
+
               <a
                 href={SITE_CONFIG.crmProject.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white font-[640] text-[14.5px] hover:shadow-[0_0_30px_rgba(59,130,246,0.35)] transition-all shrink-0"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white font-[640] text-[14.5px] hover:shadow-[0_0_30px_rgba(59,130,246,.4)] transition-shadow"
               >
                 Launch CRM Live Demo ↗
               </a>
             </div>
 
             <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
-              {/* Left Column: Interactive Screen / Mockup */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="rounded-[24px] qw-glass-strong border border-white/[.12] p-4 sm:p-5 relative shadow-2xl"
               >
-                {/* Browser bar */}
                 <div className="flex items-center justify-between px-3 py-2 bg-[#121c32] rounded-t-[14px] border-b border-white/[.07] text-[11px] text-[#8ea4c5]">
                   <div className="flex items-center gap-1.5">
                     <span className="w-3 h-3 rounded-full bg-[#ff5f56]" />
@@ -615,7 +622,6 @@ export default function App() {
                   <span className="text-[10px] text-emerald-400 font-mono font-bold">Live Status</span>
                 </div>
 
-                {/* Dashboard / Login Preview UI */}
                 <div className="bg-[#0b1222] rounded-b-[14px] p-5 sm:p-6 border border-white/[.05] relative overflow-hidden">
                   <div className="flex items-center justify-between border-b border-white/[.08] pb-4 mb-5">
                     <div>
@@ -635,7 +641,6 @@ export default function App() {
                     </a>
                   </div>
 
-                  {/* Sample Pipeline metrics */}
                   <div className="grid grid-cols-3 gap-3 mb-5">
                     <div className="qw-glass rounded-xl p-3 text-center">
                       <div className="text-[10px] text-[#8ba2c3]">Active Deals</div>
@@ -654,7 +659,6 @@ export default function App() {
                     </div>
                   </div>
 
-                  {/* Interactive Demo Callout box inside screen */}
                   <div className="bg-gradient-to-r from-[#182848] to-[#121c32] rounded-xl p-4 border border-white/[.10] flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div>
                       <div className="text-[13px] font-bold text-white flex items-center gap-1.5">
@@ -676,7 +680,6 @@ export default function App() {
                 </div>
               </motion.div>
 
-              {/* Right Column: Details & Demo Credentials Card */}
               <div className="space-y-6">
                 <div>
                   <div className="text-[11.5px] tracking-[0.16em] text-[#7da8ff] font-[600] uppercase">System Overview</div>
@@ -688,7 +691,6 @@ export default function App() {
                   </p>
                 </div>
 
-                {/* Tech badges */}
                 <div className="flex flex-wrap gap-2">
                   {SITE_CONFIG.crmProject.tags.map((tag) => (
                     <span
@@ -700,7 +702,6 @@ export default function App() {
                   ))}
                 </div>
 
-                {/* DEMO CREDENTIALS BOX */}
                 <div className="rounded-[20px] qw-glass-strong border border-[#3B82F6]/30 p-5 bg-[#0e192f] shadow-lg">
                   <div className="flex items-center justify-between mb-3">
                     <div className="text-[13px] font-[700] text-white flex items-center gap-2">
@@ -711,7 +712,6 @@ export default function App() {
                   </div>
 
                   <div className="space-y-2.5">
-                    {/* Email */}
                     <div className="flex items-center justify-between bg-[#080f1e] border border-white/[.08] rounded-xl px-3.5 py-2.5">
                       <div>
                         <div className="text-[10px] text-[#8097b5] uppercase font-semibold">Login Email</div>
@@ -728,7 +728,6 @@ export default function App() {
                       </button>
                     </div>
 
-                    {/* Password */}
                     <div className="flex items-center justify-between bg-[#080f1e] border border-white/[.08] rounded-xl px-3.5 py-2.5">
                       <div>
                         <div className="text-[10px] text-[#8097b5] uppercase font-semibold">Login Password</div>
@@ -759,7 +758,6 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Bullet Points */}
                 <div className="grid grid-cols-2 gap-3 text-[13px] text-[#c5d7ee]">
                   <div className="flex items-center gap-2">
                     <span className="text-emerald-400 font-bold">✓</span>
@@ -783,7 +781,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* WHY / STATS */}
         <section className="py-[42px] sm:py-[62px] border-y border-white/[.07] bg-[#0c1426]/55">
           <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-10">
             <div className="text-center mb-7 md:mb-10">
@@ -815,30 +812,28 @@ export default function App() {
           </div>
         </section>
 
-  
-      {/* PORTFOLIO */}
-      <section id="portfolio" className="relative z-10 py-24 bg-white/50 dark:bg-slate-950/40 border-y border-slate-200/60 dark:border-slate-800/60 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">Portfolio</h2>
-            <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">Recent work we have delivered for businesses looking to grow online.</p>
-          </motion.div>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {PORTFOLIO.map((p, i) => (
-              <motion.a key={i} href={p.link} target={p.link.startsWith("http") ? "_blank" : "_self"} rel={p.link.startsWith("http") ? "noopener noreferrer" : undefined} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.05 }} className="group block rounded-2xl border border-slate-200/70 dark:border-slate-800/70 bg-white/80 dark:bg-slate-900/70 backdrop-blur-xl shadow-sm hover:shadow-lg transition overflow-hidden">
-                <div className="aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
-                  <img src={p.image} alt={p.title} className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
-                </div>
-                <div className="p-6">
-                  <h3 className="mt-3 text-lg font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">{p.title}</h3>
-                  <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 line-clamp-2">{p.description}</p>
-                </div>
-              </motion.a>
-            ))}
+        <section id="portfolio" className="relative z-10 py-24 bg-white/50 dark:bg-slate-950/40 border-y border-slate-200/60 dark:border-slate-800/60 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">Portfolio</h2>
+              <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">Recent work we have delivered for businesses looking to grow online.</p>
+            </motion.div>
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+              {PORTFOLIO.map((p, i) => (
+                <motion.a key={i} href={p.link} target={p.link.startsWith("http") ? "_blank" : "_self"} rel={p.link.startsWith("http") ? "noopener noreferrer" : undefined} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} whileHover={{ y: -4 }} className="group block overflow-hidden rounded-[22px] border border-slate-200/70 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900/80">
+                  <div className="aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
+                    <img src={p.image} alt={p.title} className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="mt-3 text-lg font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">{p.title}</h3>
+                    <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 line-clamp-2">{p.description}</p>
+                  </div>
+                </motion.a>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-      {/* PRICING */}
+        </section>
+
         <section id="pricing" className="py-[80px] sm:py-[100px] bg-[#0b1426]/60 border-y border-white/[.06]">
           <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-10">
             <div className="text-center max-w-[720px] mx-auto">
@@ -850,10 +845,9 @@ export default function App() {
             <div className="grid lg:grid-cols-3 gap-[18px] mt-12 items-stretch">
               {PRICING.map((plan)=>(
                 <div key={plan.name}
-                  className={`relative rounded-[24px] p-[26px] ${plan.popular ? "qw-glass-strong shadow-[0_0_60px_rgba(106,112,255,.14)] scale-[1.018] z-10" : "qw-glass-strong"} ${plan.highlight ? "ring-1 ring-[#8B5CF6]/30" : ""}`}
-                >
+                  className={`relative rounded-[24px] p-[26px] ${plan.popular ? "qw-glass-strong shadow-[0_0_60px_rgba(106,112,255,.14)] scale-[1.018] z-10" : "qw-glass-strong"} ${plan.highlight ? "border border-[#f59e0b]/20" : ""}`}>
                   {plan.popular && (
-                    <div className="absolute -top-[12px] left-1/2 -translate-x-1/2 text-[11px] font-[690] tracking-[0.09em] px-[13px] py-[6px] rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white shadow">MOST POPULAR</div>
+                    <div className="absolute -top-[12px] left-1/2 -translate-x-1/2 text-[11px] font-[690] tracking-[0.09em] px-[13px] py-[6px] rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white">MOST POPULAR</div>
                   )}
                   <div className="display-font text-[20px] font-[650]">{plan.name}</div>
                   <div className="text-[12.7px] text-[#9aadca] mt-1">{plan.note}</div>
@@ -868,7 +862,7 @@ export default function App() {
                       </li>
                     ))}
                   </ul>
-                  <a href="#contact" className={`mt-7 w-full inline-flex justify-center rounded-[13px] px-4 py-[13px] font-[630] text-[14px] transition ${plan.popular ? "bg-white text-[#0d1530]" : "qw-glass text-[#dde9ff] hover:bg-white/[.09]"}`}>
+                  <a href="#contact" className={`mt-7 w-full inline-flex justify-center rounded-[13px] px-4 py-[13px] font-[630] text-[14px] transition ${plan.popular ? "bg-white text-[#0d1530]" : "bg-white/[.05] text-white hover:bg-white/[.10]"}`}>
                     {plan.cta}
                   </a>
                   <div className="text-[11.3px] text-[#7f91ad] mt-3 text-center">14-day delivery • unlimited revisions • updates on-request</div>
@@ -889,7 +883,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* PROCESS */}
         <section className="py-[84px] sm:py-[105px]">
           <div className="max-w-[1020px] mx-auto px-5 sm:px-8 lg:px-10">
             <div className="text-center mb-12">
@@ -923,14 +916,13 @@ export default function App() {
           </div>
         </section>
 
-        {/* ABOUT */}
         <section id="about" className="py-[78px] sm:py-[100px] bg-[#0b1426]/62 border-y border-white/[.06]">
           <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-10 grid lg:grid-cols-[1.05fr_.95fr] gap-12 items-center">
             <div>
               <div className="text-[11.5px] tracking-[0.18em] text-[#7da8ff] font-[600]">ABOUT DBT Digital</div>
               <h2 className="display-font text-[33px] sm:text-[41px] tracking-[-0.021em] mt-3 leading-[1.12]">A boutique web studio shipping agency-grade work — managed for you.</h2>
               <p className="text-[#9db0cc] mt-4 text-[16.6px] leading-relaxed">
-                We build, design, and host professional websites for ambitious businesses, creators, and startups. From razor-sharp landing pages to complex portals and e-commerce – managed end-to-end, updates on request.
+                We build, design, and host professional websites for ambitious businesses, creators, and startups. From razor-sharp landing pages to complex portals and e-commerce – managed end-to-end.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mt-8 text-[13.8px] text-[#c5d6ec]">
                 {[
@@ -961,15 +953,13 @@ export default function App() {
                   <div><div className="display-font text-[24px] font-[700]">48h</div><div className="text-[11px] text-[#8fa6c3]">Avg reply</div></div>
                 </div>
                 <div className="mt-5 text-[12.6px] text-[#9db3cf] bg-white/[0.035] rounded-[12px] px-3 py-3 border border-white/[0.06]">
-                  <strong className="text-[#dbe7ff]">Maintenance? On request.</strong> No packages include maintenance. Care Plan <strong className="text-[#bfe7d2]">R499 p/m</strong> optional. Self-edit CMS available on request.<br/>
-                  <span className="text-[#ffd18a]">Custom domains: R350 / year</span>
+                  <strong className="text-[#dbe7ff]">Maintenance? On request.</strong> No packages include maintenance. Care Plan <strong className="text-[#bfe7d2]">R499 p/m</strong> optional. Self-edit CMS is available on request and custom domains are <span className="text-[#ffd18a]">R350 / year</span>.
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* FAQ */}
         <section id="faq" className="py-[76px] sm:py-[96px] bg-[#0b1426]/62 border-y border-white/[.06]">
           <div className="max-w-[900px] mx-auto px-5 sm:px-8">
             <div className="text-center mb-9">
@@ -981,7 +971,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* CONTACT */}
         <section id="contact" className="py-[82px] sm:py-[108px]">
           <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-10 grid lg:grid-cols-[.9fr_1.1fr] gap-10 items-start">
             <div>
@@ -998,7 +987,7 @@ export default function App() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3"><span className="w-[36px] h-[36px] rounded-[11px] qw-glass flex items-center justify-center">💬</span> WhatsApp Business (instant)</div>
-                <div className="flex items-center gap-3"><span className="w-[36px] h-[36px] rounded-[11px] qw-glass flex items-center justify-center">📍</span> {SITE_CONFIG.location} • Remote Worldwide</div>
+                <div className="flex items-center gap-3"><span className="w-[36px] h-[36px] rounded-[11px] qw-glass flex items-center justify-center">📍</span> {SITE_CONFIG.location} • Remote friendly</div>
               </div>
 
               <div className="mt-7 flex gap-3">
@@ -1008,7 +997,7 @@ export default function App() {
                   ["gh","https://github.com/"],
                   ["ig","https://instagram.com/"],
                 ].map(([l, href]) => (
-                  <a key={l} href={href} target="_blank" rel="noreferrer" className="w-[42px] h-[42px] rounded-[13px] qw-glass flex items-center justify-center text-[12px] font-[700] text-[#b9cce6] hover:text-white transition">{l}</a>
+                  <a key={l} href={href} target="_blank" rel="noreferrer" className="w-[42px] h-[42px] rounded-[13px] qw-glass flex items-center justify-center text-[12px] font-[700] text-[#b9cced] hover:text-white">{l}</a>
                 ))}
               </div>
 
@@ -1025,7 +1014,6 @@ export default function App() {
         </section>
       </main>
 
-      {/* FOOTER */}
       <footer className="border-t border-white/[.07] bg-[#08111f]/95 relative">
         <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-10 py-[52px]">
           <div className="grid md:grid-cols-4 gap-10">
@@ -1058,7 +1046,7 @@ export default function App() {
               <div className="text-[12px] tracking-[0.14em] text-[#85a0c4] mb-3">NEWSLETTER</div>
               <p className="text-[13.2px] text-[#8fa3be] mb-3">Monthly build notes & launch recaps.</p>
               <form onSubmit={(e)=>{e.preventDefault(); showToast("Subscribed! Check your inbox.")}} className="flex gap-[8px]">
-                <input required type="email" placeholder="your@email.com" className="flex-1 bg-white/[.055] border border-white/[.12] rounded-[11px] px-[12px] py-[10px] text-[13.4px] outline-none focus:border-[#5b9aff] text-white placeholder:text-[#7f92ad]" />
+                <input required type="email" placeholder="your@email.com" className="flex-1 bg-white/[.055] border border-white/[.12] rounded-[11px] px-[12px] py-[10px] text-[13.4px] outline-none" />
                 <button className="px-[14px] py-[10px] rounded-[11px] bg-white text-[#0d1630] text-[13px] font-[650]">→</button>
               </form>
             </div>
@@ -1075,17 +1063,15 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Floating WhatsApp */}
       <a
         href="https://wa.me/15555555555"
         target="_blank" rel="noreferrer"
-        className="fixed bottom-[18px] right-[18px] z-[55] w-[56px] h-[56px] rounded-full bg-[#1fc96a] text-white flex items-center justify-center text-[25px] shadow-[0_10px_28px_rgba(22,193,90,.34)] hover:scale-[1.05] transition"
+        className="fixed bottom-[18px] right-[18px] z-[55] w-[56px] h-[56px] rounded-full bg-[#1fc96a] text-white flex items-center justify-center text-[25px] shadow-[0_10px_28px_rgba(22,193,90,.45)]"
         aria-label="Chat on WhatsApp"
       >
         ✆
       </a>
 
-      {/* Back to top */}
       <AnimatePresence>
         {showTop && (
           <motion.button
@@ -1099,7 +1085,6 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {/* Cookie Consent */}
       <AnimatePresence>
         {!cookieAccepted && (
           <motion.div
@@ -1131,7 +1116,6 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {/* Toast */}
       <AnimatePresence>
         {toast && (
           <motion.div
@@ -1204,7 +1188,6 @@ function ContactForm({ onSuccess }: { onSuccess: ()=>void }) {
     if(!validate()) return;
     setSending(true);
     try {
-      // Send via FormSubmit.co – messages land in SITE_CONFIG.email inbox
       const res = await fetch(SITE_CONFIG.contactEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
@@ -1227,7 +1210,6 @@ function ContactForm({ onSuccess }: { onSuccess: ()=>void }) {
       onSuccess();
       setForm({name:"",business:"",email:"",phone:"",service:"Website Development",budget:"R5k – R8k",details:""});
     } catch (err) {
-      // fallback: open mail client so message is never lost
       setSending(false);
       const body = encodeURIComponent(
 `Name: ${form.name}
@@ -1284,7 +1266,7 @@ ${form.details}`
         </div>
         <div className="sm:col-span-2">
           <label className={labelCls}>Project Details *</label>
-          <textarea rows={5} className={fieldCls + " resize-y"} value={form.details} onChange={e=>setForm({...form,details:e.target.value})} placeholder="Tell us about goals, pages, deadline, inspirations... Updates are managed by us – CMS access available on request." />
+          <textarea rows={5} className={fieldCls + " resize-y"} value={form.details} onChange={e=>setForm({...form,details:e.target.value})} placeholder="Tell us about goals, pages, deadline, and anything else that matters." />
           {errors.details && <div className="text-[11.7px] text-rose-300 mt-1">{errors.details}</div>}
         </div>
       </div>
@@ -1300,15 +1282,6 @@ ${form.details}`
         Messages sent to: <span className="text-[#b8cced]">{SITE_CONFIG.email}</span><br/>
         Full code ownership • Updates on request • Self-edit CMS add-on.
       </div>
-      {/* 
-        CONTACT FORM DELIVERY — WHERE DO MESSAGES GO?
-        ─────────────────────────────────────────────
-        1. Online: POST → {SITE_CONFIG.contactEndpoint}
-           → FormSubmit.co forwards to: {SITE_CONFIG.email}
-        2. Fallback: mailto:{SITE_CONFIG.email} opens automatically
-        3. To change destination: edit SITE_CONFIG.email at top of src/App.tsx
-        4. To change prices: edit SITE_CONFIG.prices at top of src/App.tsx
-      */}
     </form>
   );
 }
