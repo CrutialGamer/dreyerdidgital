@@ -5,6 +5,7 @@ const NAV_LINKS = [
   { id: "home", label: "Home" },
   { id: "services", label: "Services" },
   { id: "featured", label: "CRM Demo" },
+  { id: "portfolio", label: "Portfolio" },
   { id: "pricing", label: "Pricing" },
   { id: "about", label: "About" },
   { id: "faq", label: "FAQ" },
@@ -13,13 +14,13 @@ const NAV_LINKS = [
 
 /* 
 ==============================================
- DREYER DIGITAL — EASY EDIT CONFIG
+ DBT Digital — EASY EDIT CONFIG
  Change prices / contact details here.
  All site sections read from this file.
 ==============================================
 */
 export const SITE_CONFIG = {
-  brand: "Dreyer Digital",
+  brand: "DBT Digital",
   email: "armanddreyer57@gmail.com",          // ← CONTACT FORM MESSAGES GO HERE
   publicEmail: "armanddreyer57@gmail.com",     // business email shown publicly
   whatsapp: "27820000000",                   // ← WhatsApp number (international, no +)
@@ -48,7 +49,7 @@ export const SITE_CONFIG = {
   crmProject: {
     title: "Custom CRM & Sales Pipeline System",
     subtitle: "Full-Stack Web Application",
-    url: "https://crm-application-seven.vercel.app/login?next=%2F",
+    url: "https://crm.indleladata.co.za/login?next=%2F",
     demoEmail: "demo@crm.co.za",
     demoPassword: "demo@2026",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel", "Auth & RBAC", "PostgreSQL"],
@@ -168,7 +169,7 @@ const PROCESS = [
 ];
 
 const FAQS = [
-  { q: "Can I update the website myself?", a: "No — by default, all sites are fully managed by Dreyer Digital. Content updates, security, and changes are handled by our team on request (pay-as-you-go, or optional Care Plan from R499 p/m). Prefer to edit yourself? We can enable self-edit CMS access on request as a one-time add-on, with training videos and editor access. Full code ownership transfer is available at any time — no lock-in." },
+  { q: "Can I update the website myself?", a: "No — by default, all sites are fully managed by DBT Digital. Content updates, security, and changes are handled by our team on request (pay-as-you-go, or optional Care Plan from R499 p/m). Prefer to edit yourself? We can enable self-edit CMS access on request as a one-time add-on, with training videos and editor access. Full code ownership transfer is available at any time — no lock-in." },
   { q: "Do your packages include maintenance / updates?", a: "No. All packages are one-time build pricing in South African Rand with a 30-day bug warranty. Ongoing maintenance, security patches, content updates, and monthly changes are NOT included. Updates are handled on-request and billed per task, or via an optional Care Plan at R499 p/m. Self-edit CMS is available on request separately." },
   { q: "How long does a website take?", a: "Landing pages: 7–10 days. Full business sites: 2–3 weeks. E-commerce / custom apps: 3–6 weeks. We move fast without cutting quality, and provide weekly builds." },
   { q: "Can you redesign an existing website?", a: "Absolutely. We audit your current site, preserve SEO equity, migrate content, and rebuild with a modern premium stack. Average redesign lift: +42% conversions." },
@@ -269,7 +270,7 @@ export default function App() {
                   transition={{ duration: 1.7, repeat: Infinity }}
                 />
               </motion.div>
-              <div className="display-font text-[17px] text-[#d5e3f6] tracking-tight font-500">Dreyer Digital</div>
+              <div className="display-font text-[17px] text-[#d5e3f6] tracking-tight font-500">DBT Digital</div>
               <div className="text-[11px] text-slate-400 mt-1 tracking-wide">Managed premium builds…</div>
               <div className="w-44 h-[2px] bg-white/10 rounded-full overflow-hidden mx-auto mt-5">
                 <motion.div
@@ -293,7 +294,7 @@ export default function App() {
                 <span className="display-font text-[18px] font-[700] text-white tracking-[-0.02em]">D</span>
               </div>
               <div>
-                <div className="display-font text-[18.5px] font-[650] tracking-[-0.016em] leading-5">Dreyer Digital</div>
+                <div className="display-font text-[18.5px] font-[650] tracking-[-0.016em] leading-5">DBT Digital</div>
                 <div className="text-[10.5px] text-[#95a7c4] tracking-[0.15em] font-[500] leading-3">STUDIO</div>
               </div>
             </a>
@@ -517,7 +518,7 @@ export default function App() {
             <div className="rounded-[24px] qw-glass-strong p-[22px] sm:p-[28px] flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 border border-[#f59e0b]/18">
               <div>
                 <div className="display-font text-[22px] sm:text-[25px] font-[660] tracking-tight">Can I update my website myself? <span className="text-[#ffc36a]">No — by default.</span></div>
-                <p className="text-[#a8b9d3] text-[14.8px] mt-1.5 max-w-[700px]">All Dreyer Digital sites are <strong className="text-[#d8e6ff] font-[600]">fully managed by us</strong>. Content updates, security, and changes are handled on request — pay-as-you-go, or optional Care Plan <strong className="text-[#bfe7d2]">R499 p/m</strong>. Prefer self-edit? <strong className="text-[#d8e6ff] font-[600]">CMS access can be enabled on request</strong> as a one-time add-on with training. Custom domains: <strong className="text-[#ffd18a]">R350 / year</strong>.</p>
+                <p className="text-[#a8b9d3] text-[14.8px] mt-1.5 max-w-[700px]">All DBT Digital sites are <strong className="text-[#d8e6ff] font-[600]">fully managed by us</strong>. Content updates, security, and changes are handled on request — pay-as-you-go, or optional Care Plan <strong className="text-[#bfe7d2]">R499 p/m</strong>. Prefer self-edit? <strong className="text-[#d8e6ff] font-[600]">CMS access can be enabled on request</strong> as a one-time add-on with training. Custom domains: <strong className="text-[#ffd18a]">R350 / year</strong>.</p>
               </div>
               <a href="#faq" className="shrink-0 px-5 py-[12px] rounded-full bg-white text-[#0d1530] text-[13.8px] font-[650]">Read the FAQ →</a>
             </div>
@@ -814,7 +815,30 @@ export default function App() {
           </div>
         </section>
 
-        {/* PRICING */}
+  
+      {/* PORTFOLIO */}
+      <section id="portfolio" className="relative z-10 py-24 bg-white/50 dark:bg-slate-950/40 border-y border-slate-200/60 dark:border-slate-800/60 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">Portfolio</h2>
+            <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">Recent work we have delivered for businesses looking to grow online.</p>
+          </motion.div>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {PORTFOLIO.map((p, i) => (
+              <motion.a key={i} href={p.link} target={p.link.startsWith("http") ? "_blank" : "_self"} rel={p.link.startsWith("http") ? "noopener noreferrer" : undefined} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.05 }} className="group block rounded-2xl border border-slate-200/70 dark:border-slate-800/70 bg-white/80 dark:bg-slate-900/70 backdrop-blur-xl shadow-sm hover:shadow-lg transition overflow-hidden">
+                <div className="aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
+                  <img src={p.image} alt={p.title} className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
+                </div>
+                <div className="p-6">
+                  <h3 className="mt-3 text-lg font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">{p.title}</h3>
+                  <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 line-clamp-2">{p.description}</p>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* PRICING */}
         <section id="pricing" className="py-[80px] sm:py-[100px] bg-[#0b1426]/60 border-y border-white/[.06]">
           <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-10">
             <div className="text-center max-w-[720px] mx-auto">
@@ -903,7 +927,7 @@ export default function App() {
         <section id="about" className="py-[78px] sm:py-[100px] bg-[#0b1426]/62 border-y border-white/[.06]">
           <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-10 grid lg:grid-cols-[1.05fr_.95fr] gap-12 items-center">
             <div>
-              <div className="text-[11.5px] tracking-[0.18em] text-[#7da8ff] font-[600]">ABOUT DREYER DIGITAL</div>
+              <div className="text-[11.5px] tracking-[0.18em] text-[#7da8ff] font-[600]">ABOUT DBT Digital</div>
               <h2 className="display-font text-[33px] sm:text-[41px] tracking-[-0.021em] mt-3 leading-[1.12]">A boutique web studio shipping agency-grade work — managed for you.</h2>
               <p className="text-[#9db0cc] mt-4 text-[16.6px] leading-relaxed">
                 We build, design, and host professional websites for ambitious businesses, creators, and startups. From razor-sharp landing pages to complex portals and e-commerce – managed end-to-end, updates on request.
@@ -1008,7 +1032,7 @@ export default function App() {
             <div>
               <div className="flex items-center gap-[10px] mb-3">
                 <div className="w-9 h-9 rounded-[12px] bg-gradient-to-br from-[#3B82F6] to-[#8B5CF6] flex items-center justify-center text-white font-[700] display-font">D</div>
-                <span className="display-font text-[17px] font-[680]">Dreyer Digital</span>
+                <span className="display-font text-[17px] font-[680]">DBT Digital</span>
               </div>
               <p className="text-[13.5px] text-[#8fa3be] leading-relaxed">Managed websites that grow your business. Design • Dev • Hosting • On-request support.</p>
             </div>
@@ -1041,7 +1065,7 @@ export default function App() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/[.075] mt-10 pt-6 text-[12.7px] text-[#7f91aa]">
-            <div>© {new Date().getFullYear()} Dreyer Digital. All rights reserved.</div>
+            <div>© {new Date().getFullYear()} DBT Digital. All rights reserved.</div>
             <div className="flex gap-6">
               <a href="#" className="hover:text-[#c2d6ef]">Privacy Policy</a>
               <a href="#" className="hover:text-[#c2d6ef]">Terms</a>
@@ -1192,7 +1216,7 @@ function ContactForm({ onSuccess }: { onSuccess: ()=>void }) {
           service: form.service,
           budget: form.budget,
           message: form.details,
-          _subject: `New Dreyer Digital quote — ${form.name} / ${form.service}`,
+          _subject: `New DBT Digital quote — ${form.name} / ${form.service}`,
           _captcha: "false",
           _template: "table",
           _replyto: form.email,
@@ -1216,7 +1240,7 @@ Budget: ${form.budget}
 Project Details:
 ${form.details}`
       );
-      window.location.href = `mailto:${SITE_CONFIG.email}?subject=${encodeURIComponent("Dreyer Digital – Project Brief: " + form.name)}&body=${body}`;
+      window.location.href = `mailto:${SITE_CONFIG.email}?subject=${encodeURIComponent("DBT Digital – Project Brief: " + form.name)}&body=${body}`;
       setSubmitError("Email client opened as backup. We also tried to send online.");
       setTimeout(()=>{ onSuccess(); }, 900);
     }
