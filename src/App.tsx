@@ -5,7 +5,6 @@ const NAV_LINKS = [
   { id: "home", label: "Home" },
   { id: "services", label: "Services" },
   { id: "featured", label: "CRM Demo" },
-  { id: "portfolio", label: "Portfolio" },
   { id: "pricing", label: "Pricing" },
   { id: "about", label: "About" },
   { id: "faq", label: "FAQ" },
@@ -170,33 +169,12 @@ const PROCESS = [
 
 const FAQS = [
   { q: "Can I update the website myself?", a: "No — by default, all sites are fully managed by DBT Digital. Content updates, security, and changes are handled by our team on request (pay-as-you-go)." },
-  { q: "Do your packages include maintenance / updates?", a: "No. All packages are one-time build pricing in South African Rand with a 30-day bug warranty. Ongoing maintenance, security patches, and content changes are handled on request." },
+  { q: "Do your packages include maintenance / updates?", a: "No. All packages are one-time build pricing in South African Rand with a 30-day bug warranty. Ongoing maintenance, security patches, and content changes are optional and billed separately." },
   { q: "How long does a website take?", a: "Landing pages: 7–10 days. Full business sites: 2–3 weeks. E-commerce / custom apps: 3–6 weeks. We move fast without cutting quality." },
   { q: "Can you redesign an existing website?", a: "Absolutely. We audit your current site, preserve SEO equity, migrate content, and rebuild with a modern premium stack." },
   { q: "Do you offer hosting?", a: "Yes. Secure global CDN, SSL, daily backups, 99.9% uptime, and fully managed hosting. Hosting is included in Business & Premium for year 1." },
   { q: "Can you build online stores?", a: "Yes. Shopify headless, WooCommerce, or custom storefronts are all possible. We can scope payments, inventory, subscriptions, and multi-currency flows." },
   { q: "How much is a custom domain?", a: "Custom .co.za / .com domains are R350 per year, managed by us. Includes DNS setup, SSL, and email forwarding setup." },
-];
-
-const PORTFOLIO = [
-  {
-    title: "Northwind Rebrand",
-    description: "Luxury brand positioning and conversion-focused landing page for a premium business launch.",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
-    link: "#contact"
-  },
-  {
-    title: "Forge Studio",
-    description: "A polished service website with strong lead generation and clear offer positioning.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80",
-    link: "#contact"
-  },
-  {
-    title: "Arc Systems",
-    description: "Clean SaaS-style marketing site designed to highlight product value and trust signals.",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
-    link: "#contact"
-  }
 ];
 
 function ScrollProgressBar() {
@@ -261,8 +239,8 @@ export default function App() {
       `}</style>
       <ScrollProgressBar />
       <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
-        <div className="absolute -top-36 -right-28 h-[520px] w-[520px] rounded-full blur-[120px] opacity-[.16]" style={{ background: "radial-gradient(circle at center, #3B82F6 0%, #8B5CF6 52%, transparent 100%)" }} />
-        <div className="absolute top-[48%] -left-44 h-[420px] w-[420px] rounded-full blur-[110px] opacity-[.10]" style={{ background: "radial-gradient(circle at center, #06B6D4 0%, #8B5CF6 60%, transparent 100%)" }} />
+        <div className="absolute -top-36 -right-28 h-[520px] w-[520px] rounded-full blur-[120px] opacity-[.16]" style={{ background: "radial-gradient(circle at center, #3B82F6 0%, #8B5CF6 52%, transparent 80%)" }} />
+        <div className="absolute top-[48%] -left-44 h-[420px] w-[420px] rounded-full blur-[110px] opacity-[.10]" style={{ background: "radial-gradient(circle at center, #06B6D4 0%, #8B5CF6 60%, transparent 85%)" }} />
         <div className="absolute bottom-0 right-1/3 h-[230px] w-[680px] rounded-full blur-[100px] opacity-[.07]" style={{ background: "radial-gradient(circle at center, #8B5CF6 0%, #3B82F6 100%)" }} />
         <div className="qw-grid absolute inset-0 opacity-[0.19]" />
       </div>
@@ -597,7 +575,7 @@ export default function App() {
                 href={SITE_CONFIG.crmProject.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white font-[640] text-[14.5px] hover:shadow-[0_0_30px_rgba(59,130,246,.4)] transition-shadow"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white font-[640] text-[14.5px] hover:shadow-[0_0_30px_rgba(59,130,246,.35)] transition-shadow"
               >
                 Launch CRM Live Demo ↗
               </a>
@@ -812,28 +790,6 @@ export default function App() {
           </div>
         </section>
 
-        <section id="portfolio" className="relative z-10 py-24 bg-white/50 dark:bg-slate-950/40 border-y border-slate-200/60 dark:border-slate-800/60 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">Portfolio</h2>
-              <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">Recent work we have delivered for businesses looking to grow online.</p>
-            </motion.div>
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-10">
-              {PORTFOLIO.map((p, i) => (
-                <motion.a key={i} href={p.link} target={p.link.startsWith("http") ? "_blank" : "_self"} rel={p.link.startsWith("http") ? "noopener noreferrer" : undefined} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} whileHover={{ y: -4 }} className="group block overflow-hidden rounded-[22px] border border-slate-200/70 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900/80">
-                  <div className="aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
-                    <img src={p.image} alt={p.title} className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="mt-3 text-lg font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">{p.title}</h3>
-                    <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 line-clamp-2">{p.description}</p>
-                  </div>
-                </motion.a>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="pricing" className="py-[80px] sm:py-[100px] bg-[#0b1426]/60 border-y border-white/[.06]">
           <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-10">
             <div className="text-center max-w-[720px] mx-auto">
@@ -845,9 +801,11 @@ export default function App() {
             <div className="grid lg:grid-cols-3 gap-[18px] mt-12 items-stretch">
               {PRICING.map((plan)=>(
                 <div key={plan.name}
-                  className={`relative rounded-[24px] p-[26px] ${plan.popular ? "qw-glass-strong shadow-[0_0_60px_rgba(106,112,255,.14)] scale-[1.018] z-10" : "qw-glass-strong"} ${plan.highlight ? "border border-[#f59e0b]/20" : ""}`}>
+                  className={`relative rounded-[24px] p-[26px] ${plan.popular ? "qw-glass-strong shadow-[0_0_60px_rgba(106,112,255,.14)] scale-[1.018] z-10" : "qw-glass-strong"} ${plan.highlight ? "ring-1 ring-[#7ea7ff]/40" : ""}`}>
                   {plan.popular && (
-                    <div className="absolute -top-[12px] left-1/2 -translate-x-1/2 text-[11px] font-[690] tracking-[0.09em] px-[13px] py-[6px] rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white">MOST POPULAR</div>
+                    <div className="absolute -top-[12px] left-1/2 -translate-x-1/2 text-[11px] font-[690] tracking-[0.09em] px-[13px] py-[6px] rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white shadow-[0_10px_30px_rgba(106,112,255,.3)]">
+                      POPULAR
+                    </div>
                   )}
                   <div className="display-font text-[20px] font-[650]">{plan.name}</div>
                   <div className="text-[12.7px] text-[#9aadca] mt-1">{plan.note}</div>
@@ -862,7 +820,7 @@ export default function App() {
                       </li>
                     ))}
                   </ul>
-                  <a href="#contact" className={`mt-7 w-full inline-flex justify-center rounded-[13px] px-4 py-[13px] font-[630] text-[14px] transition ${plan.popular ? "bg-white text-[#0d1530]" : "bg-white/[.05] text-white hover:bg-white/[.10]"}`}>
+                  <a href="#contact" className={`mt-7 w-full inline-flex justify-center rounded-[13px] px-4 py-[13px] font-[630] text-[14px] transition ${plan.popular ? "bg-white text-[#0d1530] hover:bg-[#edf0ff]" : "bg-white/[0.05] text-[#edf4ff] hover:bg-white/[0.08]"}`}>
                     {plan.cta}
                   </a>
                   <div className="text-[11.3px] text-[#7f91ad] mt-3 text-center">14-day delivery • unlimited revisions • updates on-request</div>
@@ -922,7 +880,7 @@ export default function App() {
               <div className="text-[11.5px] tracking-[0.18em] text-[#7da8ff] font-[600]">ABOUT DBT Digital</div>
               <h2 className="display-font text-[33px] sm:text-[41px] tracking-[-0.021em] mt-3 leading-[1.12]">A boutique web studio shipping agency-grade work — managed for you.</h2>
               <p className="text-[#9db0cc] mt-4 text-[16.6px] leading-relaxed">
-                We build, design, and host professional websites for ambitious businesses, creators, and startups. From razor-sharp landing pages to complex portals and e-commerce – managed end-to-end.
+                We build, design, and host professional websites for ambitious businesses, creators, and startups. From razor-sharp landing pages to complex portals and e-commerce — managed end-to-end for speed, clarity, and conversion.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mt-8 text-[13.8px] text-[#c5d6ec]">
                 {[
@@ -953,7 +911,7 @@ export default function App() {
                   <div><div className="display-font text-[24px] font-[700]">48h</div><div className="text-[11px] text-[#8fa6c3]">Avg reply</div></div>
                 </div>
                 <div className="mt-5 text-[12.6px] text-[#9db3cf] bg-white/[0.035] rounded-[12px] px-3 py-3 border border-white/[0.06]">
-                  <strong className="text-[#dbe7ff]">Maintenance? On request.</strong> No packages include maintenance. Care Plan <strong className="text-[#bfe7d2]">R499 p/m</strong> optional. Self-edit CMS is available on request and custom domains are <span className="text-[#ffd18a]">R350 / year</span>.
+                  <strong className="text-[#dbe7ff]">Maintenance? On request.</strong> No packages include maintenance. Care Plan <strong className="text-[#bfe7d2]">R499 p/m</strong> optional. Self-edit CMS available by request.
                 </div>
               </div>
             </div>
@@ -987,7 +945,7 @@ export default function App() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3"><span className="w-[36px] h-[36px] rounded-[11px] qw-glass flex items-center justify-center">💬</span> WhatsApp Business (instant)</div>
-                <div className="flex items-center gap-3"><span className="w-[36px] h-[36px] rounded-[11px] qw-glass flex items-center justify-center">📍</span> {SITE_CONFIG.location} • Remote friendly</div>
+                <div className="flex items-center gap-3"><span className="w-[36px] h-[36px] rounded-[11px] qw-glass flex items-center justify-center">📍</span> {SITE_CONFIG.location} • Remote-friendly</div>
               </div>
 
               <div className="mt-7 flex gap-3">
@@ -997,7 +955,7 @@ export default function App() {
                   ["gh","https://github.com/"],
                   ["ig","https://instagram.com/"],
                 ].map(([l, href]) => (
-                  <a key={l} href={href} target="_blank" rel="noreferrer" className="w-[42px] h-[42px] rounded-[13px] qw-glass flex items-center justify-center text-[12px] font-[700] text-[#b9cced] hover:text-white">{l}</a>
+                  <a key={l} href={href} target="_blank" rel="noreferrer" className="w-[42px] h-[42px] rounded-[13px] qw-glass flex items-center justify-center text-[12px] font-[700] text-[#b9ccde] hover:text-white">{l}</a>
                 ))}
               </div>
 
@@ -1046,7 +1004,7 @@ export default function App() {
               <div className="text-[12px] tracking-[0.14em] text-[#85a0c4] mb-3">NEWSLETTER</div>
               <p className="text-[13.2px] text-[#8fa3be] mb-3">Monthly build notes & launch recaps.</p>
               <form onSubmit={(e)=>{e.preventDefault(); showToast("Subscribed! Check your inbox.")}} className="flex gap-[8px]">
-                <input required type="email" placeholder="your@email.com" className="flex-1 bg-white/[.055] border border-white/[.12] rounded-[11px] px-[12px] py-[10px] text-[13.4px] outline-none" />
+                <input required type="email" placeholder="your@email.com" className="flex-1 bg-white/[.055] border border-white/[.12] rounded-[11px] px-[12px] py-[10px] text-[13.4px] outline-none placeholder:text-[#7a8fac] text-white" />
                 <button className="px-[14px] py-[10px] rounded-[11px] bg-white text-[#0d1630] text-[13px] font-[650]">→</button>
               </form>
             </div>
@@ -1066,7 +1024,7 @@ export default function App() {
       <a
         href="https://wa.me/15555555555"
         target="_blank" rel="noreferrer"
-        className="fixed bottom-[18px] right-[18px] z-[55] w-[56px] h-[56px] rounded-full bg-[#1fc96a] text-white flex items-center justify-center text-[25px] shadow-[0_10px_28px_rgba(22,193,90,.45)]"
+        className="fixed bottom-[18px] right-[18px] z-[55] w-[56px] h-[56px] rounded-full bg-[#1fc96a] text-white flex items-center justify-center text-[25px] shadow-[0_10px_28px_rgba(22,193,90,.35)]"
         aria-label="Chat on WhatsApp"
       >
         ✆
@@ -1228,7 +1186,7 @@ ${form.details}`
     }
   };
 
-  const fieldCls = "w-full bg-[#0f1a2d] border border-white/[.12] rounded-[13px] px-[14px] py-[12px] text-[14.2px] text-white placeholder:text-[#7689a7] outline-none focus:border-[#5a97ff] transition";
+  const fieldCls = "w-full bg-[#0f1a2d] border border-white/[.12] rounded-[13px] px-[14px] py-[12px] text-[14.2px] text-white placeholder:text-[#7689a7] outline-none focus:border-[#5a97ff] transition-colors";
   const labelCls = "block text-[12.4px] text-[#94a9c5] mb-[6px] font-[550]";
 
   return (
@@ -1266,7 +1224,7 @@ ${form.details}`
         </div>
         <div className="sm:col-span-2">
           <label className={labelCls}>Project Details *</label>
-          <textarea rows={5} className={fieldCls + " resize-y"} value={form.details} onChange={e=>setForm({...form,details:e.target.value})} placeholder="Tell us about goals, pages, deadline, and anything else that matters." />
+          <textarea rows={5} className={fieldCls + " resize-y"} value={form.details} onChange={e=>setForm({...form,details:e.target.value})} placeholder="Tell us about goals, pages, deadline, and what you need built." />
           {errors.details && <div className="text-[11.7px] text-rose-300 mt-1">{errors.details}</div>}
         </div>
       </div>
