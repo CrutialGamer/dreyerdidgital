@@ -22,8 +22,8 @@ export const SITE_CONFIG = {
   brand: "DBT Digital",
   email: "armanddreyer57@gmail.com",          // ← CONTACT FORM MESSAGES GO HERE
   publicEmail: "armanddreyer57@gmail.com",     // business email shown publicly
-  whatsapp: "27820000000",                   // ← WhatsApp number (international, no +)
-  phoneDisplay: "+27 82 000 0000",
+  whatsapp: "27633413232",                    // ← WhatsApp number (international, no +)
+  phoneDisplay: "+27 63 341 3232",
   location: "Johannesburg, South Africa",
 
   // ── PRICES ── CHANGE HERE ──────────────────
@@ -116,7 +116,8 @@ const PRICING = [
       "Contact Form",
       "Basic SEO",
       "Free SSL",
-      `Custom domain – ${SITE_CONFIG.currency}${SITE_CONFIG.prices.domainYearly} / yr`
+      `Custom domain – ${SITE_CONFIG.currency}${SITE_CONFIG.prices.domainYearly} / yr`,
+      "Hosting not included"
     ],
     cta: "Start with Starter",
     popular: false
@@ -133,7 +134,8 @@ const PRICING = [
       "Blog",
       "Google Analytics",
       "Hosting Included",
-      `Custom domain – ${SITE_CONFIG.currency}${SITE_CONFIG.prices.domainYearly} / yr`
+      `Custom domain – ${SITE_CONFIG.currency}${SITE_CONFIG.prices.domainYearly} / yr`,
+      "Hosting not included"
     ],
     cta: "Choose Business",
     popular: true
@@ -169,7 +171,7 @@ const PROCESS = [
 
 const FAQS = [
   { q: "Can I update the website myself?", a: "No — by default, all sites are fully managed by DBT Digital. Content updates, security, and changes are handled by our team on request (pay-as-you-go)." },
-  { q: "Do your packages include maintenance / updates?", a: "No. All packages are one-time build pricing in South African Rand with a 30-day bug warranty. Ongoing maintenance, security patches, and content changes are optional and billed separately." },
+  { q: "Do your packages include maintenance / updates?", a: "No. All packages are one-time build pricing in South African Rand with a 30-day bug warranty. Ongoing maintenance, security patches, and content updates are billed separately on request." },
   { q: "How long does a website take?", a: "Landing pages: 7–10 days. Full business sites: 2–3 weeks. E-commerce / custom apps: 3–6 weeks. We move fast without cutting quality." },
   { q: "Can you redesign an existing website?", a: "Absolutely. We audit your current site, preserve SEO equity, migrate content, and rebuild with a modern premium stack." },
   { q: "Do you offer hosting?", a: "Yes. Secure global CDN, SSL, daily backups, 99.9% uptime, and fully managed hosting. Hosting is included in Business & Premium for year 1." },
@@ -239,8 +241,8 @@ export default function App() {
       `}</style>
       <ScrollProgressBar />
       <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
-        <div className="absolute -top-36 -right-28 h-[520px] w-[520px] rounded-full blur-[120px] opacity-[.16]" style={{ background: "radial-gradient(circle at center, #3B82F6 0%, #8B5CF6 52%, transparent 80%)" }} />
-        <div className="absolute top-[48%] -left-44 h-[420px] w-[420px] rounded-full blur-[110px] opacity-[.10]" style={{ background: "radial-gradient(circle at center, #06B6D4 0%, #8B5CF6 60%, transparent 85%)" }} />
+        <div className="absolute -top-36 -right-28 h-[520px] w-[520px] rounded-full blur-[120px] opacity-[.16]" style={{ background: "radial-gradient(circle at center, #3B82F6 0%, #8B5CF6 52%, transparent 100%)" }} />
+        <div className="absolute top-[48%] -left-44 h-[420px] w-[420px] rounded-full blur-[110px] opacity-[.10]" style={{ background: "radial-gradient(circle at center, #06B6D4 0%, #8B5CF6 60%, transparent 100%)" }} />
         <div className="absolute bottom-0 right-1/3 h-[230px] w-[680px] rounded-full blur-[100px] opacity-[.07]" style={{ background: "radial-gradient(circle at center, #8B5CF6 0%, #3B82F6 100%)" }} />
         <div className="qw-grid absolute inset-0 opacity-[0.19]" />
       </div>
@@ -442,7 +444,7 @@ export default function App() {
                                 transition={{ duration: 4, repeat: Infinity, ease:"easeInOut" }}
                                 className="rounded-[16px] h-[148px] bg-gradient-to-br from-[#2a395e] to-[#1a2540] border border-white/[.09] overflow-hidden"
                               >
-                                <div className="w-full h-full opacity-[.96]" style={{backgroundImage:"linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px)", backgroundSize:"18px 18px"}} />
+                                <div className="w-full h-full opacity-[.96]" style={{backgroundImage:"linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px)", backgroundSize:"22px 22px"}} />
                                 <div className="absolute inset-0 p-4 text-[9px] text-[#b8c9e6]">
                                   <div className="qw-glass rounded-lg p-2 mb-2">🛠️ Update request – sent</div>
                                   <div className="qw-glass rounded-lg p-2 mb-2">✓ Deployed in 36h</div>
@@ -507,7 +509,7 @@ export default function App() {
             <div className="rounded-[24px] qw-glass-strong p-[22px] sm:p-[28px] flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 border border-[#f59e0b]/18">
               <div>
                 <div className="display-font text-[22px] sm:text-[25px] font-[660] tracking-tight">Can I update my website myself? <span className="text-[#ffc36a]">No — by default.</span></div>
-                <p className="text-[#a8b9d3] text-[14.8px] mt-1.5 max-w-[700px]">All DBT Digital sites are <strong className="text-[#d8e6ff] font-[600]">fully managed by us</strong>. Content updates, security, and changes are handled by our team on request.</p>
+                <p className="text-[#a8b9d3] text-[14.8px] mt-1.5 max-w-[700px]">All DBT Digital sites are <strong className="text-[#d8e6ff] font-[600]">fully managed by us</strong>. Content updates, security, and changes are handled by our team on request — no monthly lock-in.</p>
               </div>
               <a href="#faq" className="shrink-0 px-5 py-[12px] rounded-full bg-white text-[#0d1530] text-[13.8px] font-[650]">Read the FAQ →</a>
             </div>
@@ -575,7 +577,7 @@ export default function App() {
                 href={SITE_CONFIG.crmProject.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white font-[640] text-[14.5px] hover:shadow-[0_0_30px_rgba(59,130,246,.35)] transition-shadow"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white font-[640] text-[14.5px] hover:shadow-[0_0_30px_rgba(59,130,246,.28)] transition-shadow"
               >
                 Launch CRM Live Demo ↗
               </a>
@@ -801,9 +803,9 @@ export default function App() {
             <div className="grid lg:grid-cols-3 gap-[18px] mt-12 items-stretch">
               {PRICING.map((plan)=>(
                 <div key={plan.name}
-                  className={`relative rounded-[24px] p-[26px] ${plan.popular ? "qw-glass-strong shadow-[0_0_60px_rgba(106,112,255,.14)] scale-[1.018] z-10" : "qw-glass-strong"} ${plan.highlight ? "ring-1 ring-[#7ea7ff]/40" : ""}`}>
+                  className={`relative rounded-[24px] p-[26px] ${plan.popular ? "qw-glass-strong shadow-[0_0_60px_rgba(106,112,255,.14)] scale-[1.018] z-10" : "qw-glass-strong"} ${plan.highlight ? "ring-1 ring-[#8fb5ff]/30" : ""}`}>
                   {plan.popular && (
-                    <div className="absolute -top-[12px] left-1/2 -translate-x-1/2 text-[11px] font-[690] tracking-[0.09em] px-[13px] py-[6px] rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white shadow-[0_10px_30px_rgba(106,112,255,.3)]">
+                    <div className="absolute -top-[12px] left-1/2 -translate-x-1/2 text-[11px] font-[690] tracking-[0.09em] px-[13px] py-[6px] rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white shadow-lg">
                       POPULAR
                     </div>
                   )}
@@ -820,15 +822,16 @@ export default function App() {
                       </li>
                     ))}
                   </ul>
-                  <a href="#contact" className={`mt-7 w-full inline-flex justify-center rounded-[13px] px-4 py-[13px] font-[630] text-[14px] transition ${plan.popular ? "bg-white text-[#0d1530] hover:bg-[#edf0ff]" : "bg-white/[0.05] text-[#edf4ff] hover:bg-white/[0.08]"}`}>
+                  <a href="#contact" className={`mt-7 w-full inline-flex justify-center rounded-[13px] px-4 py-[13px] font-[630] text-[14px] transition ${plan.popular ? "bg-white text-[#0d1530] hover:bg-[#ebf0ff]" : "bg-white/[.08] text-white hover:bg-white/[.12]"}`}>
                     {plan.cta}
                   </a>
-                  <div className="text-[11.3px] text-[#7f91ad] mt-3 text-center">14-day delivery • unlimited revisions • updates on-request</div>
+                  <div className="text-[11.3px] text-[#7f91ad] mt-3 text-center">7-day delivery • unlimited revisions • updates on-request</div>
                 </div>
               ))}
             </div>
 
             <div className="mt-8 max-w-[860px] mx-auto rounded-[18px] qw-glass px-5 py-4 text-[13.5px] text-[#a8bad4] text-center leading-relaxed">
+              <strong className="text-[#d4e4ff]">Hosting prices:</strong> <span className="text-[#bfe7d2]">R199 p/m</span> to <span className="text-[#ffd18a]">R1 200 / year</span>.<br/>
               <strong className="text-[#d4e4ff]">No maintenance included in any package.</strong> Updates are handled on-request, billed per task.<br/>
               Optional Care Plan: <span className="text-[#bfe7d2]">R499 p/m</span> — security patches, backups, performance checks, priority content changes.<br/>
               <span className="text-[#ffc36a]">Self-edit CMS access available on request as a one-time add-on.</span><br/>
@@ -880,7 +883,7 @@ export default function App() {
               <div className="text-[11.5px] tracking-[0.18em] text-[#7da8ff] font-[600]">ABOUT DBT Digital</div>
               <h2 className="display-font text-[33px] sm:text-[41px] tracking-[-0.021em] mt-3 leading-[1.12]">A boutique web studio shipping agency-grade work — managed for you.</h2>
               <p className="text-[#9db0cc] mt-4 text-[16.6px] leading-relaxed">
-                We build, design, and host professional websites for ambitious businesses, creators, and startups. From razor-sharp landing pages to complex portals and e-commerce — managed end-to-end for speed, clarity, and conversion.
+                We build, design, and host professional websites for ambitious businesses, creators, and startups. From razor-sharp landing pages to complex portals and e-commerce — managed end-to-end with clear communication and measurable results.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mt-8 text-[13.8px] text-[#c5d6ec]">
                 {[
@@ -911,7 +914,7 @@ export default function App() {
                   <div><div className="display-font text-[24px] font-[700]">48h</div><div className="text-[11px] text-[#8fa6c3]">Avg reply</div></div>
                 </div>
                 <div className="mt-5 text-[12.6px] text-[#9db3cf] bg-white/[0.035] rounded-[12px] px-3 py-3 border border-white/[0.06]">
-                  <strong className="text-[#dbe7ff]">Maintenance? On request.</strong> No packages include maintenance. Care Plan <strong className="text-[#bfe7d2]">R499 p/m</strong> optional. Self-edit CMS available by request.
+                  <strong className="text-[#dbe7ff]">Maintenance? On request.</strong> No packages include maintenance. Care Plan <strong className="text-[#bfe7d2]">R499 p/m</strong> optional. Self-edit CMS access available as an add-on. 
                 </div>
               </div>
             </div>
@@ -944,7 +947,10 @@ export default function App() {
                     <div className="text-[11px] text-[#7d92b0]">Form messages → {SITE_CONFIG.email}</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3"><span className="w-[36px] h-[36px] rounded-[11px] qw-glass flex items-center justify-center">💬</span> WhatsApp Business (instant)</div>
+                <div className="flex items-center gap-3">
+                  <span className="w-[36px] h-[36px] rounded-[11px] qw-glass flex items-center justify-center">💬</span>
+                  <a href={`https://wa.me/${SITE_CONFIG.whatsapp}`} target="_blank" rel="noreferrer" className="hover:text-white">WhatsApp Business (instant): {SITE_CONFIG.phoneDisplay}</a>
+                </div>
                 <div className="flex items-center gap-3"><span className="w-[36px] h-[36px] rounded-[11px] qw-glass flex items-center justify-center">📍</span> {SITE_CONFIG.location} • Remote-friendly</div>
               </div>
 
@@ -955,7 +961,7 @@ export default function App() {
                   ["gh","https://github.com/"],
                   ["ig","https://instagram.com/"],
                 ].map(([l, href]) => (
-                  <a key={l} href={href} target="_blank" rel="noreferrer" className="w-[42px] h-[42px] rounded-[13px] qw-glass flex items-center justify-center text-[12px] font-[700] text-[#b9ccde] hover:text-white">{l}</a>
+                  <a key={l} href={href} target="_blank" rel="noreferrer" className="w-[42px] h-[42px] rounded-[13px] qw-glass flex items-center justify-center text-[12px] font-[700] text-[#b9ccdf] hover:text-white transition-colors">{l}</a>
                 ))}
               </div>
 
@@ -1004,7 +1010,7 @@ export default function App() {
               <div className="text-[12px] tracking-[0.14em] text-[#85a0c4] mb-3">NEWSLETTER</div>
               <p className="text-[13.2px] text-[#8fa3be] mb-3">Monthly build notes & launch recaps.</p>
               <form onSubmit={(e)=>{e.preventDefault(); showToast("Subscribed! Check your inbox.")}} className="flex gap-[8px]">
-                <input required type="email" placeholder="your@email.com" className="flex-1 bg-white/[.055] border border-white/[.12] rounded-[11px] px-[12px] py-[10px] text-[13.4px] outline-none placeholder:text-[#7a8fac] text-white" />
+                <input required type="email" placeholder="your@email.com" className="flex-1 bg-white/[.055] border border-white/[.12] rounded-[11px] px-[12px] py-[10px] text-[13.4px] outline-none text-white placeholder:text-[#7287a5]" />
                 <button className="px-[14px] py-[10px] rounded-[11px] bg-white text-[#0d1630] text-[13px] font-[650]">→</button>
               </form>
             </div>
@@ -1022,9 +1028,9 @@ export default function App() {
       </footer>
 
       <a
-        href="https://wa.me/15555555555"
+        href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
         target="_blank" rel="noreferrer"
-        className="fixed bottom-[18px] right-[18px] z-[55] w-[56px] h-[56px] rounded-full bg-[#1fc96a] text-white flex items-center justify-center text-[25px] shadow-[0_10px_28px_rgba(22,193,90,.35)]"
+        className="fixed bottom-[18px] right-[18px] z-[55] w-[56px] h-[56px] rounded-full bg-[#1fc96a] text-white flex items-center justify-center text-[25px] shadow-[0_10px_28px_rgba(22,193,90,.35)] hover:scale-[1.03] transition-transform"
         aria-label="Chat on WhatsApp"
       >
         ✆
@@ -1224,7 +1230,7 @@ ${form.details}`
         </div>
         <div className="sm:col-span-2">
           <label className={labelCls}>Project Details *</label>
-          <textarea rows={5} className={fieldCls + " resize-y"} value={form.details} onChange={e=>setForm({...form,details:e.target.value})} placeholder="Tell us about goals, pages, deadline, and what you need built." />
+          <textarea rows={5} className={fieldCls + " resize-y"} value={form.details} onChange={e=>setForm({...form,details:e.target.value})} placeholder="Tell us about goals, pages, deadline, and any inspiration." />
           {errors.details && <div className="text-[11.7px] text-rose-300 mt-1">{errors.details}</div>}
         </div>
       </div>
